@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 const indexRouter = require("./routes/index.js");
 const usersRouter = require("./routes/users.js");
-// const miniatureRouter = require("./routes/miniature.js");
+const miniatureRouter = require("./routes/miniature.js");
 
 const cors = require("cors");
 app.use(cors({
@@ -33,7 +33,7 @@ app.use(cors({
 
 
 app.use("/", indexRouter);
-// app.use("/minis", miniatureRouter);
+app.use("/minis", miniatureRouter);
 app.use('/users', usersRouter);
 
 function errorHandler(err, req, res, next) {

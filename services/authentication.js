@@ -51,3 +51,5 @@ module.exports = {
     authenticateUser,
     authenticateJWT,
 }
+
+//TODO: Change the JWT to be sent via HEADERS instead of cookies!!!!
